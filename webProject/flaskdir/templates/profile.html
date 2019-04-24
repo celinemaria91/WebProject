@@ -1,0 +1,17 @@
+<!-- templates/profile.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div><h1 class="title">
+  Welcome, {{ name }}!
+</h1>
+</div>
+<div>
+	 
+      <form action="{{ url_for('main.proc') }}" method="POST">
+    <input name="text">
+    <input type="submit">
+</form>
+</div>
+{% endblock %}

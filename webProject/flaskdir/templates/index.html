@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="animated shake slow">
+	<h1 class="title ">
+  Movie Reaction Analyser
+</h1> 
+</div>
+<div class="animated headShake delay-1s">
+	<h2 class="subtitle">
+  Login or register to begin
+</h2>
+</div>
+{% endblock %}
+<div>
+	<h1>Anime</h1>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div>
